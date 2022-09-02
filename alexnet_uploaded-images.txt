@@ -1,0 +1,78 @@
+Argument 1: uploaded_images/
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:       Golden_retriever_02.jpeg  label:           golden retriever
+ 2 key:       Golden_retriever_01.jpeg  label:           golden retriever
+ 3 key:                 rabbit_01.jpeg  label:                     rabbit
+ 4 key:                    car_01.jpeg  label:                        car
+
+     MATCH:
+
+      Golden_retriever_02.jpeg: 
+Real:           golden retriever   Classifier:               golden retriever
+
+                   car_01.jpeg: 
+Real:                        car   Classifier:          sports car, sport car
+
+ NOT A MATCH:
+
+      Golden_retriever_01.jpeg: 
+Real:           golden retriever   Classifier:                       tub, vat
+
+                rabbit_01.jpeg: 
+Real:                     rabbit   Classifier:                           hare
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+      Golden_retriever_02.jpeg: 
+Real:           golden retriever   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                   car_01.jpeg: 
+Real:                        car   Classifier:          sports car, sport car  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+      Golden_retriever_01.jpeg: 
+Real:           golden retriever   Classifier:                       tub, vat  
+PetLabelDog: 1  ClassLabelDog: 0
+
+                rabbit_01.jpeg: 
+Real:                     rabbit   Classifier:                           hare  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+
+*** Results Summary for CNN Model Architecture ALEXNET ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+
+
+*** Percentage Summary for CNN Model Architecture ALEXNET ***
+pct_match           : 50.000
+pct_correct_dogs    : 50.000
+pct_correct_breed   : 50.000
+pct_correct_notdogs : 100.000
+
+INCORRECT Dog/NOT Dog Assignments:
+Real:           golden retriever Classifier:                       tub, vat
+
+** Total Elapsed Runtime: 0:0:0
